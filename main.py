@@ -1,5 +1,6 @@
 import yagmail
 import os
+import time
 
 sender = 'xyz@gmail.com'
 receiver = 'xyz@gmail.com'
@@ -11,6 +12,8 @@ Here is the content of the email!
 Hi!
 """
 
-yag = yagmail.SMTP(user=sender, password=os.getenv('PASSWORD'))
-yag.send(to=receiver, subject=subject, contents=contents)
-print('Email Sent!')
+while True:
+  yag = yagmail.SMTP(user=sender, password=os.getenv('PASSWORD'))
+  yag.send(to=receiver, subject=subject, contents=contents)
+  print('Email Sent!')
+  time.sleep(60)
