@@ -8,7 +8,7 @@ receiver = 'xyz@gmail.com'
 subject = "This is the subject"
 
 contents = """
-Here is the content of the email!
+Here is the content of the email! 
 Hi!
 """
 
